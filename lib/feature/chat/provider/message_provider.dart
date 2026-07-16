@@ -118,7 +118,7 @@ class MessageListNotifier extends StateNotifier<ChatBot> {
           }
         }
       },
-      onError: (error) {
+      onError: (Object error) {
         logError('Error in response stream $error');
       },
     );

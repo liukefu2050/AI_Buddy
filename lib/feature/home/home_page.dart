@@ -246,7 +246,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                                 isMainButton: true,
                                 onPressed: () async {
                                   final result =
-                                      await FilePicker.platform.pickFiles(
+                                      await FilePicker.pickFiles(
                                     type: FileType.custom,
                                     allowedExtensions: ['pdf'],
                                   );

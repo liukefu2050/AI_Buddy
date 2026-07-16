@@ -20,7 +20,6 @@ linter:
     - always_use_package_imports
     - annotate_overrides
     #    - avoid_annotating_with_dynamic
-    - avoid_as
     - avoid_bool_literals_in_conditional_expressions
     #    - avoid_catches_without_on_clauses
     - avoid_catching_errors
@@ -82,7 +81,6 @@ linter:
     - empty_catches
     - empty_constructor_bodies
     - empty_statements
-    - enable_null_safety
     - eol_at_end_of_file
     - exhaustive_cases
     - file_names
@@ -92,7 +90,6 @@ linter:
     - implicit_call_tearoffs
     - implicit_reopen
     - invalid_case_patterns
-    - invariant_booleans
     - join_return_with_assignment
     - leading_newlines_in_multiline_strings
     - library_annotations
@@ -126,7 +123,6 @@ linter:
     - prefer_adjacent_string_concatenation
     - prefer_asserts_in_initializer_lists
     - prefer_asserts_with_message
-    - prefer_bool_in_asserts
     - prefer_collection_literals
     - prefer_conditional_assignment
     - prefer_const_constructors
@@ -136,7 +132,6 @@ linter:
     - prefer_constructors_over_static_methods
     - prefer_contains
     #    - prefer_double_quotes
-    - prefer_equal_for_default_values
     #    - prefer_expression_function_bodies
     - prefer_final_fields
     - prefer_final_in_for_each
@@ -176,7 +171,6 @@ linter:
     - sort_constructors_first
     #    - sort_pub_dependencies
     - sort_unnamed_constructors_first
-    - super_goes_last
     - test_types_in_equals
     - throw_in_finally
     - tighten_type_of_initializing_formals

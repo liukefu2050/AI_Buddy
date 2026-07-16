@@ -86,7 +86,7 @@ ThemeData _getTheme() {
         width: 0,
       ),
     ),
-    cardTheme: const CardTheme(
+    cardTheme: const CardThemeData(
       clipBehavior: Clip.antiAlias,
       elevation: 0,
       shape: RoundedRectangleBorder(
@@ -132,7 +132,7 @@ ThemeData _getTheme() {
       titleTextStyle: textTheme.titleLarge,
       backgroundColor: _background,
     ),
-    dialogTheme: DialogTheme(
+    dialogTheme: DialogThemeData(
       backgroundColor: colorScheme.background,
       surfaceTintColor: colorScheme.background,
       titleTextStyle: textTheme.titleLarge,
