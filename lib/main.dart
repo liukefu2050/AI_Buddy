@@ -13,17 +13,25 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   _initLoggy();
   _initGoogleFonts();
-
-  final appDocumentDir = await getApplicationDocumentsDirectory();
-  Hive
-    ..init(appDocumentDir.path)
-    ..registerAdapter(ChatBotAdapter());
-  await Hive.openBox<ChatBot>('chatbots');
+  await _initHive();
   runApp(
     const ProviderScope(
       child: AIBuddy(),
     ),
   );
+}
+
+Future<void> _initHive() async {
+  if (!kIsWeb) {
+    final appDocumentDir = await getApplicationDocumentsDirectory();
+    Hive.init(appDocumentDir.path);
+  }
+
+  if (!Hive.isAdapterRegistered(0)) {
+    Hive.registerAdapter(ChatBotAdapter());
+  }
+
+  await Hive.openBox<ChatBot>('chatbots');
 }
 
 void _initLoggy() {

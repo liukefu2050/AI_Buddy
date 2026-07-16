@@ -17,6 +17,7 @@ class GeminiRepository extends BaseGeminiRepository {
   final splitter = const LineSplitter();
   static const baseUrl =
       'https://generativelanguage.googleapis.com/v1beta/models';
+  static const _defaultModel = 'gemini-2.5-flash';
 
   /// Streams content from the Gemini API based on the provided content
   /// and optional image.
@@ -30,7 +31,7 @@ class GeminiRepository extends BaseGeminiRepository {
     try {
       final geminiAPIKey = await SecureStorage().getApiKey();
       Object? mapData = {};
-      final model = image == null ? 'gemini-pro' : 'gemini-pro-vision';
+      const model = _defaultModel;
       if (image == null) {
         mapData = {
           'contents': [
